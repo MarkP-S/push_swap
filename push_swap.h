@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 14:09:05 by ldubok            #+#    #+#             */
-/*   Updated: 2026/08/25 09:18:49 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/08/26 17:10:47 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,3 +55,13 @@ typedef struct s_stack
 	t_node	*head;
 	t_node	*tail;
 }	t_stack;
+
+
+// stack operations
+int	ft_swap_stack(t_stack *st);
+int ft_pop_stack(t_stack *st);
+int	ft_push_stack(t_stack *st, int value);
+int	ft_rotate_stack(t_stack *st);
+int ft_reverse_rotate_stack(t_stack *st);
+
+
