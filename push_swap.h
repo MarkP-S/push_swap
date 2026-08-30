@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 14:09:05 by ldubok            #+#    #+#             */
-/*   Updated: 2026/08/30 20:21:07 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/08/30 20:28:30 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,8 @@ enum e_ops
 };
 typedef struct s_node
 {
-	int				*content;
+	int				content;
+	int				rank;
 	struct s_node	*prev;
 	struct s_node	*next;
 }	t_node;
@@ -46,7 +47,6 @@ typedef struct s_stack
 	t_node	*head;
 	t_node	*tail;
 }	t_stack;
-
 
 typedef struct s_environment
 {
