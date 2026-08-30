@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 14:09:05 by ldubok            #+#    #+#             */
-/*   Updated: 2026/08/26 17:10:47 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/08/30 20:21:07 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,6 @@ enum e_ops
 	RRB,
 	RRR
 };
-
-typedef struct s_benchmark
-{
-	enum e_mode	mode;
-	size_t		*ops_counters;
-	// benchmark mode
-	int			benchmark_on;
-}	t_benchmark;
-
 typedef struct s_node
 {
 	int				*content;
@@ -56,6 +47,16 @@ typedef struct s_stack
 	t_node	*tail;
 }	t_stack;
 
+
+typedef struct s_environment
+{
+	enum e_mode	mode;
+	size_t		*ops_counters;
+	// benchmark mode
+	int			benchmark_on;
+	s_stack		stack_a;
+	s_stack		stack_b;
+}	t_environment;
 
 // stack operations
 int	ft_swap_stack(t_stack *st);
