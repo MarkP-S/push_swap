@@ -6,13 +6,13 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/30 20:31:50 by ldubok            #+#    #+#             */
-/*   Updated: 2026/08/30 20:57:28 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/08/31 17:24:33 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-*t_environment	ft_env_initialisation()
+t_environment	*ft_env_initialisation()
 {
 	t_environment	*env;
 
@@ -26,5 +26,7 @@
 	env->stack_b = malloc(sizeof(t_stack));
 	if(!(env->ops_counters && env->stack_a && env->stack_b))
 		return (0);
+	env->stack_a->length = 0;
+	env->stack_b->length = 0;
 	return (env);
 }

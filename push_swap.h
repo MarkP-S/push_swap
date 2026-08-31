@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 14:09:05 by ldubok            #+#    #+#             */
-/*   Updated: 2026/08/30 20:28:30 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/08/31 17:41:13 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ typedef struct s_stack
 {
 	t_node	*head;
 	t_node	*tail;
+	int		length;
 }	t_stack;
 
 typedef struct s_environment
@@ -64,5 +65,23 @@ int ft_pop_stack(t_stack *st);
 int	ft_push_stack(t_stack *st, int value);
 int	ft_rotate_stack(t_stack *st);
 int ft_reverse_rotate_stack(t_stack *st);
+t_environment	*ft_env_initialisation();
 
+//	push operations
+int	ft_pb_op(t_environment *env);
+int	ft_pb_op(t_environment *env);
 
+//	swap operations
+int	ft_sa_op(t_environment *env);
+int	ft_sb_op(t_environment *env);
+int	ft_ss_op(t_environment *env);
+
+//	rotate operations
+int	ft_ra_op(t_environment *env);
+int	ft_rb_op(t_environment *env);
+int	ft_rr_op(t_environment *env);
+
+//	rotate operations
+int	ft_rra_op(t_environment *env);
+int	ft_rrb_op(t_environment *env);
+int	ft_rrr_op(t_environment *env);
