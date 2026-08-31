@@ -6,9 +6,11 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/31 17:30:55 by ldubok            #+#    #+#             */
-/*   Updated: 2026/08/31 17:37:34 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/08/31 17:45:58 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "push_swap.h"
 
 int	ft_sa_op(t_environment *env)
 {
