@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   env_init.c                                         :+:      :+:    :+:   */
+/*   testing_utils.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/30 20:31:50 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/02 21:20:50 by ldubok           ###   ########.fr       */
+/*   Created: 2026/09/02 20:48:05 by ldubok            #+#    #+#             */
+/*   Updated: 2026/09/02 21:30:03 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_environment	*ft_env_initialisation()
+t_environment	*get_test_env(int *array)
 {
+	int				i;
 	t_environment	*env;
 
-	env = malloc(sizeof(t_environment));
-	if(!env)
-		return (NULL);
-	env->mode = ADAPTIVE;
-	env->ops_counters = malloc(sizeof(size_t) * 11);
-	env->benchmark_on = 0;
-	env->stack_a = malloc(sizeof(t_stack));
-	env->stack_b = malloc(sizeof(t_stack));
-	if(!(env->ops_counters && env->stack_a && env->stack_b))
-		return (0);
-	env->stack_a->length = 0;
-	env->stack_b->length = 0;
+	i = 0;
+	env = ft_env_initialisation();
+	while (array[i])
+	{
+		ft_push_stack(env->stack_a, array[i], -1);
+		i++;
+	}
 	return (env);
 }
+

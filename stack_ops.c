@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 10:37:03 by ldubok            #+#    #+#             */
-/*   Updated: 2026/08/31 17:33:18 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/02 22:00:29 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int ft_pop_stack(t_stack *st)
 	if (st->head == st->tail)
 	{
 		st->head = NULL;
-		st->tail = NULL
+		st->tail = NULL;
 	}
 	else
 	{
@@ -48,6 +48,7 @@ int ft_pop_stack(t_stack *st)
 		st->tail->next = st->head;
 	}
 	free(node_to_free);
+	st->length--;
 	return (popped);
 }
 
@@ -62,18 +63,22 @@ int	ft_push_stack(t_stack *st, int value, int rank)
 		return (0);
 	new_node->content = value;
 	new_node->rank = rank;
+	// printf("%d %d\n", value, rank);
 	if (!st->head)
 	{
 		new_node->next = new_node;
 		new_node->prev = new_node;
 		st->head = new_node;
 		st->tail = new_node;
+		st->length = 1;
 		return (1);
 	}
 	new_node->prev = st->tail;
+	new_node->next = st->head;
 	st->tail->next = new_node;
 	st->head->prev = new_node;
 	st->head = new_node;
+	st->length++;
 	return (1);
 }
 

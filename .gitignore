@@ -1,0 +1,11 @@
+# Object files
+*.o
+
+# Compiled executable
+push_swap
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store

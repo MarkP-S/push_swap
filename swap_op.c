@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/31 17:30:55 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/02 17:56:42 by mapearso         ###   ########.fr       */
+/*   Updated: 2026/09/02 21:15:04 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_sa_op(t_environment *env)
 	return (1);
 }
 
-int	ft_sa_op(t_environment *env)
+int	ft_sb_op(t_environment *env)
 {
 	if(env->stack_b->length < 2)
 		return (1);

@@ -13,7 +13,7 @@
 NAME = push_swap
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 
 SRC = 	main.c \
 		env_init.c \
@@ -22,7 +22,8 @@ SRC = 	main.c \
 		push_op.c \
 		rotate_op.c \
 		reverse_rotate_op.c \
-		strategies.c 
+		strategies.c \
+		testing_utils.c
 
 OBJ = $(SRC:.c=.o)
 

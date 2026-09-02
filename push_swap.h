@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 14:09:05 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/02 20:46:40 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/02 21:14:20 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PUSH_SWAP_H
 
 #include <stdlib.h>
+#include <stdio.h>
 
 enum e_mode
 {
@@ -58,8 +59,8 @@ typedef struct s_environment
 	size_t		*ops_counters;
 	// benchmark mode
 	int			benchmark_on;
-	s_stack		stack_a;
-	s_stack		stack_b;
+	t_stack		*stack_a;
+	t_stack		*stack_b;
 }	t_environment;
 
 // stack operations
@@ -88,3 +89,8 @@ int	ft_rr_op(t_environment *env);
 int	ft_rra_op(t_environment *env);
 int	ft_rrb_op(t_environment *env);
 int	ft_rrr_op(t_environment *env);
+
+//	testing utils
+t_environment	*get_test_env(int *array);
+
+#endif
