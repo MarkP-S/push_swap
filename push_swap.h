@@ -6,9 +6,12 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 14:09:05 by ldubok            #+#    #+#             */
-/*   Updated: 2026/08/31 17:41:13 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/02 17:55:22 by mapearso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
 #include <stdlib.h>
 
@@ -62,7 +65,7 @@ typedef struct s_environment
 // stack operations
 int	ft_swap_stack(t_stack *st);
 int ft_pop_stack(t_stack *st);
-int	ft_push_stack(t_stack *st, int value);
+int	ft_push_stack(t_stack *st, int value, int rank);
 int	ft_rotate_stack(t_stack *st);
 int ft_reverse_rotate_stack(t_stack *st);
 t_environment	*ft_env_initialisation();

@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/30 20:31:50 by ldubok            #+#    #+#             */
-/*   Updated: 2026/08/31 17:24:33 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/02 17:55:55 by mapearso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_environment	*ft_env_initialisation()
 	if(!env)
 		return (NULL);
 	env->mode = ADAPTIVE;
-	env->ops_counters = malloc(sizeof(int) * 11);
+	env->ops_counters = malloc(sizeof(size_t) * 11);
 	env->benchmark_on = 0;
 	env->stack_a = malloc(sizeof(t_stack));
 	env->stack_b = malloc(sizeof(t_stack));

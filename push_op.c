@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/31 17:20:13 by ldubok            #+#    #+#             */
-/*   Updated: 2026/08/31 17:29:36 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/02 17:55:49 by mapearso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_pa_op(t_environment *env)
 	return (1);
 }
 
-int	ft_pv_op(t_environment *env)
+int	ft_pb_op(t_environment *env)
 {
 	t_node	*node_to_push;
 
