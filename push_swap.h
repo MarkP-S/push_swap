@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 14:09:05 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/02 17:55:22 by mapearso         ###   ########.fr       */
+/*   Updated: 2026/09/02 20:46:40 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ int ft_reverse_rotate_stack(t_stack *st);
 t_environment	*ft_env_initialisation();
 
 //	push operations
-int	ft_pb_op(t_environment *env);
+int	ft_pa_op(t_environment *env);
 int	ft_pb_op(t_environment *env);
 
 //	swap operations
