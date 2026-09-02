@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 10:37:03 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/02 22:00:29 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/02 22:34:15 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ int	ft_swap_stack(t_stack *st)
 
 	if (!(st))
 		return (0);
-	temp = st->head->content;
-	st->head->content = st->head->next->content;
-	st->head->next->content = temp;
+	temp = st->head->value;
+	st->head->value = st->head->next->value;
+	st->head->next->value = temp;
 	temp = st->head->rank;
 	st->head->rank = st->head->next->rank;
 	st->head->next->rank = temp;
@@ -34,7 +34,7 @@ int ft_pop_stack(t_stack *st)
 
 	if (!(st))
 		return (0);
-	popped = st->head->content;
+	popped = st->head->value;
 	node_to_free = st->head;
 	if (st->head == st->tail)
 	{
@@ -61,7 +61,7 @@ int	ft_push_stack(t_stack *st, int value, int rank)
 	new_node = malloc(sizeof(t_node));
 	if(!new_node)
 		return (0);
-	new_node->content = value;
+	new_node->value = value;
 	new_node->rank = rank;
 	// printf("%d %d\n", value, rank);
 	if (!st->head)
