@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/30 20:31:50 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/02 22:34:03 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/02 22:44:34 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,23 @@ t_environment	*ft_env_initialisation()
 void	ft_assign_ranks(t_environment *env)
 {
 	int	i;
-	int	j;
-	int	min_non_ranked;
-	int	current_rank;
+	t_node	*min_non_ranked;
+	t_node	*current_node;
 
 	i = 0;
-	j = 0;
-	min_non_ranked = env->stack_a->head->value;
+	min_non_ranked = env->stack_a->head;
+	while (i < env->stack_a->length)
+	{
+		while (min_non_ranked->rank >= 0)
+			min_non_ranked = min_non_ranked->next;
+		current_node = env->stack_a->head;
+		while (current_node->next != env->stack_a->head)
+		{
+			if (current_node->rank < 0 && current_node->value < min_non_ranked->value)
+				min_non_ranked = current_node;
+			current_node = current_node->next;
+		}
+		min_non_ranked->rank = i;
+		i++;
+	}
 }
