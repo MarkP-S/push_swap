@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-t_environment	*ft_env_initialisation()
+t_environment	*ft_env_initialisation(void)
 {
 	t_environment	*env;
 
@@ -24,10 +24,12 @@ t_environment	*ft_env_initialisation()
 	env->benchmark_on = 0;
 	env->stack_a = malloc(sizeof(t_stack));
 	env->stack_b = malloc(sizeof(t_stack));
-	if(!(env->ops_counters && env->stack_a && env->stack_b))
-		return (0);
+	if(!(env->ops_counters || env->stack_a || env->stack_b))
+		return (0); //should free whole env if any fails
 	env->stack_a->length = 0;
 	env->stack_b->length = 0;
+	//All ops counters should be set to 0 to start?
+	//Do head and tail need to be set to null at first?
 	return (env);
 }
 
