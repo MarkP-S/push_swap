@@ -24,7 +24,7 @@ t_environment	*ft_env_initialisation(void)
 	env->benchmark_on = 0;
 	env->stack_a = malloc(sizeof(t_stack));
 	env->stack_b = malloc(sizeof(t_stack));
-	if(!(env->ops_counters || env->stack_a || env->stack_b))
+	if(!(env->ops_counters && env->stack_a && env->stack_b))
 		return (0); //should free whole env if any fails
 	env->stack_a->length = 0;
 	env->stack_b->length = 0;
