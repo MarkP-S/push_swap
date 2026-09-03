@@ -11,6 +11,7 @@
 # **************************************************************************** #
 
 NAME = push_swap
+BASIC_NAME = basic
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -g
@@ -29,6 +30,17 @@ SRC = 	main.c \
 
 OBJ = $(SRC:.c=.o)
 
+BASIC_SRC = 	main.c \
+				env_init.c \
+				stack_ops.c \
+				swap_op.c \
+				push_op.c \
+				rotate_op.c \
+				reverse_rotate_op.c \
+				testing_utils.c
+
+BASIC_OBJ = $(BASIC_SRC:.c=.o)
+
 all: $(NAME)
 
 $(NAME): $(OBJ)
@@ -37,11 +49,14 @@ $(NAME): $(OBJ)
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
+basic: $(BASIC_OBJ)
+	$(CC) $(CFLAGS) $(BASIC_OBJ) -o $(BASIC_NAME)
+
 clean:
 	rm -f $(OBJ)
 
 fclean: clean
-	rm -f $(NAME) libft
+	rm -f $(NAME) $(BASIC_NAME) libft
 
 re: fclean all
 
