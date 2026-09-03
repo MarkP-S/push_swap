@@ -39,6 +39,6 @@ void	sort_three(t_environment *env)
 		ft_ra_op(env);
 	else if (mid >= top && mid >= bot)
 		ft_rra_op(env);
-	if (env->stack_a->head->value > mid)
+	if (env->stack_a->head->value > env->stack_a->head->next->value)
 		ft_sa_op(env);
 }
