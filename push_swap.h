@@ -97,4 +97,8 @@ int	ft_rrr_op(t_environment *env);
 //	testing utils
 t_environment	*get_test_env(int *array);
 
+//	algorithms
+void	selection_sort(t_environment *env);
+void	sort_three(t_environment *env);
+
 #endif

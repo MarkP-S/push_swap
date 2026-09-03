@@ -49,7 +49,7 @@ int	find_max(t_stack *stack_a)
 	return (max_index);
 }
 
-void move_to_top(t_environment *env, int index)
+void	move_to_top(t_environment *env, int index)
 {
 	if (index <= env->stack_a->length / 2)
 	{
@@ -63,7 +63,7 @@ void move_to_top(t_environment *env, int index)
 	}
 }
 
-void selection_sort(t_environment *env)
+void	selection_sort(t_environment *env)
 {
 	int	max_index;
 

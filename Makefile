@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+         #
+#    By: mapearso <mapearso@student.42warsaw.pl>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/05/10 21:55:15 by lizaveta          #+#    #+#              #
-#    Updated: 2026/08/31 17:44:25 by ldubok           ###   ########.fr        #
+#    Created: 2026/09/03 13:06:24 by mapearso          #+#    #+#              #
+#    Updated: 2026/09/03 13:06:24 by mapearso         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,9 @@ SRC = 	main.c \
 		rotate_op.c \
 		reverse_rotate_op.c \
 		strategies.c \
-		testing_utils.c
+		testing_utils.c \
+		simple.c \
+		sort_three.c 
 
 OBJ = $(SRC:.c=.o)
 
