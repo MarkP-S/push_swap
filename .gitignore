@@ -3,6 +3,7 @@
 
 # Compiled executable
 push_swap
+basic
 
 # VS Code
 .vscode/
