@@ -34,7 +34,7 @@ int	find_min(t_stack *stack_a)
 		return (-1);
 	current = stack_a->head;
 	min = current->value;
-	max_index = 0;
+	min_index = 0;
 	i = 0;
 	stack_a->head = stack_a->head->next;
 	while (i < stack_a->length)
