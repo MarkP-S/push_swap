@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 14:09:05 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/04 21:12:15 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/04 21:16:49 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ int ft_reverse_rotate_stack(t_stack *st);
 //	initiatization, input reading and preprocesing
 t_environment	*ft_env_initialisation();
 void			ft_assign_ranks(t_environment *env);
-int				ft_check_flags(char *arg);
+int				ft_handle_flags(t_environment *env, char *arg);
 
 
 //	push operations
