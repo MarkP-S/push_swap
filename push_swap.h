@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 14:09:05 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/04 20:56:40 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/04 21:00:08 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 
 enum e_mode
 {
-	SIMPLE, // 0
-	MEDIUM, // 1
-	COMPLEX, // 2
-	ADAPTIVE, // 3
+	ADAPTIVE, 
+	SIMPLE,
+	MEDIUM,
+	COMPLEX,
 };
 
 enum e_ops
@@ -57,6 +57,7 @@ typedef struct s_stack
 typedef struct s_environment
 {
 	enum e_mode	mode;
+	enum e_mode algo_used;
 	size_t		*ops_counters;
 	// benchmark mode
 	int			benchmark_flag;
