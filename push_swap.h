@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 14:09:05 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/02 22:33:48 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/04 20:56:40 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,9 @@ typedef struct s_environment
 	enum e_mode	mode;
 	size_t		*ops_counters;
 	// benchmark mode
-	int			benchmark_on;
+	int			benchmark_flag;
+	int			mode_flag;
+	int			stack_a_is_str_flag;
 	t_stack		*stack_a;
 	t_stack		*stack_b;
 }	t_environment;
