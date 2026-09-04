@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/04 21:09:55 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/04 21:18:21 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/04 22:23:10 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,26 @@ int	ft_handle_flags(t_environment *env, char *arg)
 {
 	if (arg == "--bench")
 	{
-		if(env->benchmark_flag)
-			exit(1);
 		env->benchmark_flag = 1;
+	}
+	else if (arg == "--adaptive")
+	{
+		env->mode = ADAPTIVE;
+	}
+	else if (arg == "--simple")
+	{
+		env->mode = SIMPLE;
+	}
+	else if (arg == "--medium")
+	{
+		env->mode = MEDIUM;
+	}
+	else if (arg == "--complex")
+	{
+		env->mode = COMPLEX;
 	}
 	else
 		return (0);
+	env->algo_used = env->mode;
 	return (1);
 }
