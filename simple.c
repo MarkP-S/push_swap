@@ -6,7 +6,7 @@
 /*   By: mapearso <mapearso@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 21:05:35 by mapearso          #+#    #+#             */
-/*   Updated: 2026/09/02 22:42:10 by mapearso         ###   ########.fr       */
+/*   Updated: 2026/09/04 21:14:30 by mapearso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /*
 Selection sort
 
-Find highest value in stack a - create function for this
+Find minimum value in stack a - create function for this
 Move value to top of a - ra if closer to top, rra if closer to bottom - create function
 pb to push top of a to top of b
 
@@ -36,7 +36,6 @@ int	find_min(t_stack *stack_a)
 	min = current->value;
 	min_index = 0;
 	i = 0;
-	stack_a->head = stack_a->head->next;
 	while (i < stack_a->length)
 	{
 		if (current->value < min)
@@ -67,14 +66,21 @@ void	move_to_top(t_environment *env, int index)
 void	selection_sort(t_environment *env)
 {
 	int	min_index;
+	int	i;
 
-	while (env->stack_a->length > 0)
+	i = env->stack_a->length;
+	while (i > 0)
 	{
 		min_index = find_min(env->stack_a);
 		move_to_top(env, min_index);
 		ft_pb_op(env);
+		i--;
 	}
-	while (env->stack_b->length > 0)
+	i = env->stack_b->length;
+	while (i > 0)
+	{
 		ft_pa_op(env);
+		i--;
+	}
 }
 
