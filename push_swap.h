@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
+/*   By: mapearso <mapearso@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/05 19:24:41 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/05 21:41:33 by ldubok           ###   ########.fr       */
+/*   Created: 2026/08/23 14:09:05 by ldubok            #+#    #+#             */
+/*   Updated: 2026/09/05 22:31:40 by mapearso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
@@ -112,5 +113,7 @@ void	sort_three(t_environment *env);
 
 //	printing
 void    print_op(t_environment *env, enum e_ops op);
+void	print_float(t_environment *env);
+void    print_benchmark(t_environment *env);
 
 #endif

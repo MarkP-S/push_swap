@@ -6,7 +6,7 @@
 #    By: mapearso <mapearso@student.42warsaw.pl>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/22 22:58:50 by mapearso          #+#    #+#              #
-#    Updated: 2026/09/05 17:22:53 by mapearso         ###   ########.fr        #
+#    Updated: 2026/09/05 20:44:15 by mapearso         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,7 @@ SRCS    =	ft_isalpha.c \
 			ft_lstadd_back.c \
 			ft_lstclear.c \
 			ft_lstmap.c \
-			ft_printf/ft_printf.c \
+			ft_printf/ft_printf_fd.c \
 			ft_printf/ft_putchar.c \
 			ft_printf/ft_puthex.c \
 			ft_printf/ft_putnbr.c \
