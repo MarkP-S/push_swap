@@ -27,7 +27,9 @@ SRC = main.c \
 	strategies.c \
 	testing_utils.c \
 	simple.c \
-	sort_three.c
+	sort_three.c \
+	parse_input.c \
+	printing.c
 
 OBJ = $(SRC:.c=.o)
 
