@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 20:48:05 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/03 17:37:56 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/05 17:34:58 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ t_environment	*get_test_env(int *array)
 	env = ft_env_initialisation();
 	while (array[i])
 	{
-		ft_push_stack(env->stack_a, array[i], -1);
+		ft_stack_append(env, array[i]);
 		i++;
 	}
 	return (env);

@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/30 20:31:50 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/04 22:07:04 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/05 18:59:54 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,51 @@ t_environment	*ft_env_initialisation(void)
 	//All ops counters should be set to 0 to start?
 	//Do head and tail need to be set to null at first?
 	return (env);
+}
+
+
+static void	ft_unique(t_environment *env, int value)
+{
+	t_node	*current;
+	int		i;
+
+	current = env->stack_a->head;
+	i = 0;
+	while (i < env->stack_a->length)
+	{
+		if (current->value == value)
+			exit(1);
+		current = current->next;
+		i++;
+	}
+}
+
+int		ft_stack_append(t_environment *env, int value)
+{
+	t_node	*new_node;
+
+	ft_unique(env, value);
+	new_node = malloc(sizeof(t_node));
+	if(!new_node)
+		exit(1);
+	new_node->value = value;
+	new_node->rank = -1;
+	if (!env->stack_a->head)
+	{
+		new_node->next = new_node;
+		new_node->prev = new_node;
+		env->stack_a->head = new_node;
+		env->stack_a->tail = new_node;
+		env->stack_a->length = 1;
+		return (1);
+	}
+	new_node->prev = env->stack_a->tail;
+	new_node->next = env->stack_a->head;
+	env->stack_a->tail->next = new_node;
+	env->stack_a->head->prev = new_node;
+	env->stack_a->tail = new_node;
+	env->stack_a->length++;
+	return (1);
 }
 
 void	ft_assign_ranks(t_environment *env)
