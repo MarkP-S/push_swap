@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mapearso <mapearso@student.42warsaw.pl>    +#+  +:+       +#+        */
+/*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 14:09:05 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/05 16:10:44 by mapearso         ###   ########.fr       */
+/*   Updated: 2026/09/05 16:46:08 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ typedef struct s_environment
 	int			total_ops;
 	int			benchmark_flag;
 	int			mode_flag;
-	int			stack_a_is_str_flag;
+	int			input_a_is_str_flag;
 	float		disorder;
 	t_stack		*stack_a;
 	t_stack		*stack_b;
