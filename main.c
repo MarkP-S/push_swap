@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 21:01:08 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/05 22:06:24 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/05 22:33:05 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int	main(int argc, char **argv)
 			continue;
 		exit(1);
 	}
+	selection_sort(env);
 	// rank();
 	// run_algo(env); //calc_disorder->pick an algo->run_simple/meedium/complex
 	// print_bench();
@@ -38,10 +39,10 @@ int	main(int argc, char **argv)
 	// int *arr = values;
 
 	// t_environment *env = get_test_env(arr);
-	while (env->stack_a->length)
-	{
-		printf("%d\n", ft_pop_stack(env->stack_a));
-	}
-	ft_printf("mode%d", env->mode);
+	// while (env->stack_a->length)
+	// {
+	// 	printf("%d\n", ft_pop_stack(env->stack_a));
+	// }
+	// ft_printf("mode%d", env->mode);
 	// return (0);
 }
