@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/04 21:09:55 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/05 16:01:47 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/05 16:20:05 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,14 @@ int	ft_handle_flags(t_environment *env, char *arg)
 		return (0);
 	env->algo_used = env->mode;
 	return (1);
+}
+
+int	ft_handle_str(t_environment *env, char *arg)
+{
+
+}
+
+int	ft_handle_num(t_environment *env, char *arg)
+{
+	
 }
