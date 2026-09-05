@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_op.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
+/*   By: mapearso <mapearso@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/31 17:20:13 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/02 22:34:51 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/05 16:24:22 by mapearso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int	ft_pa_op(t_environment *env)
 	rank = env->stack_b->head->rank;
 	ft_pop_stack(env->stack_b);
 	ft_push_stack(env->stack_a, value, rank);
+	print_op(env, PA);
 	return (1);
 }
 
@@ -37,5 +38,6 @@ int	ft_pb_op(t_environment *env)
 	rank = env->stack_a->head->rank;
 	ft_pop_stack(env->stack_a);
 	ft_push_stack(env->stack_b, value, rank);
+	print_op(env, PB);
 	return (1);
 }

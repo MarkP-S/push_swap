@@ -37,7 +37,9 @@ BASIC_SRC = 	main.c \
 				push_op.c \
 				rotate_op.c \
 				reverse_rotate_op.c \
-				testing_utils.c
+				testing_utils.c \
+				simple.c \
+				printing.c 
 
 BASIC_OBJ = $(BASIC_SRC:.c=.o)
 
