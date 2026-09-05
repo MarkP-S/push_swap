@@ -3,10 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
+/*   By: mapearso <mapearso@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 14:09:05 by ldubok            #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2026/09/05 17:34:33 by ldubok           ###   ########.fr       */
+=======
+/*   Updated: 2026/09/05 17:46:29 by mapearso         ###   ########.fr       */
+>>>>>>> 1e4d0a48a262ef7eaf4731f353c6f2d01b6b2616
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +19,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include "libft.h"
 
 enum e_mode
 {
@@ -62,7 +67,7 @@ typedef struct s_environment
 	int			total_ops;
 	int			benchmark_flag;
 	int			mode_flag;
-	int			input_is_str_flag;
+	int			stack_a_is_str_flag;
 	float		disorder;
 	t_stack		*stack_a;
 	t_stack		*stack_b;
@@ -74,7 +79,6 @@ int ft_pop_stack(t_stack *st);
 int	ft_push_stack(t_stack *st, int value, int rank);
 int	ft_rotate_stack(t_stack *st);
 int ft_reverse_rotate_stack(t_stack *st);
-int	ft_stack_append(t_environment *env, int num);
 
 //	initiatization, input reading and preprocesing
 t_environment	*ft_env_initialisation();

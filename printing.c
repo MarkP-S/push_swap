@@ -6,7 +6,7 @@
 /*   By: mapearso <mapearso@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/05 16:04:55 by mapearso          #+#    #+#             */
-/*   Updated: 2026/09/05 16:38:07 by mapearso         ###   ########.fr       */
+/*   Updated: 2026/09/05 17:46:34 by mapearso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,27 @@
 static void print_op_name(enum e_ops op)
 {
     if (op == SA)
-        printf("sa\n");
+        ft_printf("sa\n");
     else if (op == SB)
-        printf("sb\n");
+        ft_printf("sb\n");
     else if (op == SS)
-        printf("ss\n");
+        ft_printf("ss\n");
     else if (op == PA)
-        printf("pa\n");
+        ft_printf("pa\n");
     else if (op == PB)
-        printf("pb\n");
+        ft_printf("pb\n");
     else if (op == RA)
-        printf("ra\n");
+        ft_printf("ra\n");
     else if (op == RB)
-        printf("rb\n");
+        ft_printf("rb\n");
     else if (op == RR)
-        printf("rr\n");
+        ft_printf("rr\n");
     else if (op == RRA)
-        printf("rra\n");
+        ft_printf("rra\n");
     else if (op == RRB)
-        printf("rrb\n");
+        ft_printf("rrb\n");
     else if (op == RRR)
-        printf("rrr\n");
+        ft_printf("rrr\n");
 }
 
 void    print_op(t_environment *env, enum e_ops op)
