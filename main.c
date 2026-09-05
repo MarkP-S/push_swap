@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 21:01:08 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/04 22:42:06 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/05 16:01:39 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	main(int argc, char **argv)
 		if (ft_handle_flags(env, argv[i]))
 			continue;
 		if (ft_handle_string(env, argv[i]))
-			continue;	
+			continue;
 		if (ft_handle_num(env, argv[i]))
 			continue;
 		exit(1);

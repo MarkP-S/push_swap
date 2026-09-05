@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 14:09:05 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/04 21:16:49 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/05 16:01:12 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ typedef struct s_environment
 	int			total_ops;
 	int			benchmark_flag;
 	int			mode_flag;
-	int			stack_a_is_str_flag;
+	int			input_is_str_flag;
 	float		disorder;
 	t_stack		*stack_a;
 	t_stack		*stack_b;
@@ -79,6 +79,8 @@ int ft_reverse_rotate_stack(t_stack *st);
 t_environment	*ft_env_initialisation();
 void			ft_assign_ranks(t_environment *env);
 int				ft_handle_flags(t_environment *env, char *arg);
+int				ft_handle_str(t_environment *env, char *arg);
+int				ft_handle_num(t_environment *env, char *arg);
 
 
 //	push operations
