@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/04 21:09:55 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/05 19:12:05 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/05 19:15:40 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,9 @@ int	ft_handle_num(t_environment *env, char *arg)
 		exit(1);
 	while(arg[i])
 	{
-		if(!ft_isdigit())
+		if(!ft_isdigit(arg[i]))
+			exit(1);
+		value = value * 10 + (arg[i] - '0');
 		i++;
 	}
 	return (1);
