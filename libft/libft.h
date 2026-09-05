@@ -6,7 +6,7 @@
 /*   By: mapearso <mapearso@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/22 22:58:42 by mapearso          #+#    #+#             */
-/*   Updated: 2026/09/05 17:17:14 by mapearso         ###   ########.fr       */
+/*   Updated: 2026/09/05 20:46:09 by mapearso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-int		ft_printf(const char *format, ...);
+int		ft_printf_fd(int fd, const char *format, ...);
 
 #endif

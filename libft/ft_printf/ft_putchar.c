@@ -6,15 +6,15 @@
 /*   By: mapearso <mapearso@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/01 14:20:26 by mapearso          #+#    #+#             */
-/*   Updated: 2026/09/05 17:20:59 by mapearso         ###   ########.fr       */
+/*   Updated: 2026/09/05 19:28:59 by mapearso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "../libft.h"
 
-int	ft_putchar(char c)
+int	ft_putchar(int fd, char c)
 {
-	write(1, &c, 1);
+	write(fd, &c, 1);
 	return (1);
 }

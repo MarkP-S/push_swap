@@ -6,7 +6,7 @@
 /*   By: mapearso <mapearso@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/05 20:09:56 by mapearso          #+#    #+#             */
-/*   Updated: 2026/08/07 17:04:13 by mapearso         ###   ########.fr       */
+/*   Updated: 2026/09/05 20:32:03 by mapearso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@
 # include <stdarg.h>
 # include <stddef.h>
 
-int		ft_putchar(char c);
-int		ft_putstr(char *s);
+int		ft_putchar(int fd, char c);
+int		ft_putstr(int fd, char *s);
 size_t	ft_strlen(const char *s);
-int		ft_putnbr(int n);
-int		ft_putunsigned(unsigned int n);
-int		ft_puthex(unsigned long long n, char *base);
-int		ft_putptr(void *ptr);
-int		ft_printf(const char *format, ...);
+int		ft_putnbr(int fd, int n);
+int		ft_putunsigned(int fd, unsigned int n);
+int		ft_puthex(int fd, unsigned long long n, char *base);
+int		ft_putptr(int fd, void *ptr);
+int		ft_printf_fd(int fd, const char *format, ...);
 
 #endif
