@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 14:09:05 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/06 15:21:25 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/06 15:48:28 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,13 +79,15 @@ int	ft_rotate_stack(t_stack *st);
 int ft_reverse_rotate_stack(t_stack *st);
 int		ft_stack_append(t_environment *env, int value);
 
-//	initiatization, input reading and preprocesing
+//	initiatization, input reading, preprocesing, exit
 t_environment	*ft_env_initialisation();
 void			parse_input(t_environment *env, int argc, char **argv);
 void			ft_assign_ranks(t_environment *env);
 int				ft_handle_flags(t_environment *env, char *arg);
 int				ft_handle_str(t_environment *env, char *arg);
 void			compute_disorder(t_environment *env);
+void			ft_free_memory(t_environment *env);
+void			ft_error_exit(t_environment *env);
 
 //	push operations
 int	ft_pa_op(t_environment *env);

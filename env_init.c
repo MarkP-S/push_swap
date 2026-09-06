@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/30 20:31:50 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/06 12:45:20 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/06 15:50:19 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static void	ft_unique(t_environment *env, int value)
 	while (i < env->stack_a->length)
 	{
 		if (current->value == value)
-			exit(1);
+			ft_error_exit(env);
 		current = current->next;
 		i++;
 	}
@@ -57,7 +57,7 @@ int		ft_stack_append(t_environment *env, int value)
 	ft_unique(env, value);
 	new_node = malloc(sizeof(t_node));
 	if(!new_node)
-		exit(1);
+		ft_error_exit(env);
 	new_node->value = value;
 	new_node->rank = -1;
 	if (!env->stack_a->head)

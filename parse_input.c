@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/04 21:09:55 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/06 15:16:43 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/06 15:50:19 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,14 +74,14 @@ static int	ft_handle_num(t_environment *env, char *arg, int len)
 	if(arg[i] == '-' || arg[i] == '+')
 		i++;
 	if(!arg[i])
-		exit(1);
+		ft_error_exit(env);
 	while(i < len)
 	{
 		if(!ft_isdigit(arg[i]))
-			exit(1);
+			ft_error_exit(env);
 		value = value * 10 + (arg[i] - '0');
 		if ((sign > 0 && value > INT_MAX) || (sign < 0 || -value < INT_MIN))
-			exit(1);
+			ft_error_exit(env);
 		i++;
 	}
 	value *= sign;
@@ -129,6 +129,6 @@ void	parse_input(t_environment *env, int argc, char **argv)
 			continue;
 		if (ft_handle_str(env, argv[i]))
 			continue;
-		exit(1);
+		ft_error_exit(env);
 	}
 }
