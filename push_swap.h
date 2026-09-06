@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 14:09:05 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/06 15:16:45 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/06 15:18:40 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,6 +112,8 @@ t_environment	*get_test_env(int *array);
 //	algorithms
 void	selection_sort(t_environment *env);
 void	sort_three(t_environment *env);
+void	adaptive(t_environment *env);
+void	radix_sort(t_environment*env);
 
 //	printing
 void    print_op(t_environment *env, enum e_ops op);
