@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 14:09:05 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/06 15:48:28 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/06 16:07:39 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,12 +72,12 @@ typedef struct s_environment
 }	t_environment;
 
 // stack operations
-int	ft_swap_stack(t_stack *st);
-int ft_pop_stack(t_stack *st);
-int	ft_push_stack(t_stack *st, int value, int rank);
-int	ft_rotate_stack(t_stack *st);
-int ft_reverse_rotate_stack(t_stack *st);
-int		ft_stack_append(t_environment *env, int value);
+void	ft_swap_stack(t_stack *st);
+void 	ft_pop_stack(t_stack *st);
+void	ft_push_stack(t_environment *env, t_stack *st, int value, int rank);
+void	ft_rotate_stack(t_stack *st);
+void 	ft_reverse_rotate_stack(t_stack *st);
+void	ft_stack_append(t_environment *env, int value);
 
 //	initiatization, input reading, preprocesing, exit
 t_environment	*ft_env_initialisation();

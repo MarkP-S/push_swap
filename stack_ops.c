@@ -6,34 +6,29 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 10:37:03 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/02 22:34:15 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/06 16:05:37 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_swap_stack(t_stack *st)
+void	ft_swap_stack(t_stack *st)
 {
 	int	temp;
 
-	if (!(st))
-		return (0);
 	temp = st->head->value;
 	st->head->value = st->head->next->value;
 	st->head->next->value = temp;
 	temp = st->head->rank;
 	st->head->rank = st->head->next->rank;
 	st->head->next->rank = temp;
-	return (1);
 }
 
-int ft_pop_stack(t_stack *st)
+void ft_pop_stack(t_stack *st)
 {
 	int		popped;
 	t_node	*node_to_free;
 
-	if (!(st))
-		return (0);
 	popped = st->head->value;
 	node_to_free = st->head;
 	if (st->head == st->tail)
@@ -49,21 +44,17 @@ int ft_pop_stack(t_stack *st)
 	}
 	free(node_to_free);
 	st->length--;
-	return (popped);
 }
 
-int	ft_push_stack(t_stack *st, int value, int rank)
+void	ft_push_stack(t_environment *env, t_stack *st, int value, int rank)
 {
 	t_node	*new_node;
 
-	if(!st)
-		return (0);
 	new_node = malloc(sizeof(t_node));
 	if(!new_node)
-		return (0);
+		ft_error_exit(env);
 	new_node->value = value;
 	new_node->rank = rank;
-	// printf("%d %d\n", value, rank);
 	if (!st->head)
 	{
 		new_node->next = new_node;
@@ -71,7 +62,6 @@ int	ft_push_stack(t_stack *st, int value, int rank)
 		st->head = new_node;
 		st->tail = new_node;
 		st->length = 1;
-		return (1);
 	}
 	new_node->prev = st->tail;
 	new_node->next = st->head;
@@ -79,22 +69,16 @@ int	ft_push_stack(t_stack *st, int value, int rank)
 	st->head->prev = new_node;
 	st->head = new_node;
 	st->length++;
-	return (1);
 }
 
-int	ft_rotate_stack(t_stack *st)
+void	ft_rotate_stack(t_stack *st)
 {
-	if(!st)
-		return (0);
 	st->head = st->head->next;
 	st->tail = st->tail->next;
-	return (1);
 }
 
-int ft_reverse_rotate_stack(t_stack *st)
+void ft_reverse_rotate_stack(t_stack *st)
 {
-	if(!st)
-		return (0);
 	st->tail = st->tail->prev;
 	st->head = st->head->prev;
 	return (1);
