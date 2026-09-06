@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/05 22:08:01 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/06 20:42:08 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/06 22:33:02 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ void	run_algo(t_env *env)
 	}
 	if (env->stack_a->length == 3)
 		sort_three(env);
+	else if (env->stack_a->length == 5)
+		sort_five(env);
 	else if (env->algo_used == SIMPLE)
 		selection_sort(env);
 	else if (env->algo_used == MEDIUM)

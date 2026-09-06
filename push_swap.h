@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 14:09:05 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/06 16:11:12 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/06 22:30:13 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,6 +117,7 @@ void	sort_three(t_env *env);
 void	run_algo(t_env *env);
 void	radix_sort(t_env *env);
 void	chunk_sort(t_env *env);
+void	sort_five(t_env *env);
 
 //	printing
 void    print_op(t_env *env, enum e_ops op);

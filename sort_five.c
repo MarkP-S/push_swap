@@ -1,36 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   sort_five.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/02 21:01:08 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/06 22:10:00 by ldubok           ###   ########.fr       */
+/*   Created: 2026/09/06 22:23:13 by ldubok            #+#    #+#             */
+/*   Updated: 2026/09/06 22:41:00 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+void	sort_five(t_env *env)
 {
-	t_env *env;
-
-	env = ft_env_initialisation();
-	if (argc < 2)
-		return (0);
-	parse_input(env, argc, argv);
-	ft_assign_ranks(env);
-	compute_disorder(env);
-	if(env->disorder > 0)
-		run_algo(env);
-	print_benchmark(env);
-	return (0);
+	while (env->stack_a->head->rank)
+		ft_ra_op(env);
+	ft_pb_op(env);
+	while (env->stack_a->head->rank != 1)
+		ft_ra_op(env);
+	ft_pb_op(env);
+	sort_three(env);
+	ft_pa_op(env);
+	ft_pa_op(env);
 }
-
-	// while (env->stack_a->length)
-	// {
-	// 	ft_printf_fd(1, "%d\n", env->stack_a->head->value);
-	// 	ft_pop_stack(env->stack_a);
-	// }
-	// ft_free_memory(env);

@@ -28,6 +28,7 @@ SRC = main.c \
 	testing_utils.c \
 	simple.c \
 	sort_three.c \
+	sort_five.c \
 	parse_input.c \
 	printing.c \
 	error_exit.c \
