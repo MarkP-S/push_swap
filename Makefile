@@ -29,7 +29,8 @@ SRC = main.c \
 	simple.c \
 	sort_three.c \
 	parse_input.c \
-	printing.c
+	printing.c \
+	adaptive.c \
 
 OBJ = $(SRC:.c=.o)
 

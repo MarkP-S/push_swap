@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mapearso <mapearso@student.42warsaw.pl>    +#+  +:+       +#+         #
+#    By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/22 22:58:50 by mapearso          #+#    #+#              #
-#    Updated: 2026/09/05 20:44:15 by mapearso         ###   ########.fr        #
+#    Updated: 2026/09/05 22:39:54 by ldubok           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 

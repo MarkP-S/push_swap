@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mapearso <mapearso@student.42warsaw.pl>    +#+  +:+       +#+        */
+/*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 14:09:05 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/05 22:31:40 by mapearso         ###   ########.fr       */
+/*   Updated: 2026/09/05 22:47:55 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,7 @@ t_environment	*ft_env_initialisation();
 void			ft_assign_ranks(t_environment *env);
 int				ft_handle_flags(t_environment *env, char *arg);
 int				ft_handle_str(t_environment *env, char *arg);
+void			compute_disorder(t_environment *env);
 
 //	push operations
 int	ft_pa_op(t_environment *env);

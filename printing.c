@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   printing.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mapearso <mapearso@student.42warsaw.pl>    +#+  +:+       +#+        */
+/*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/05 16:04:55 by mapearso          #+#    #+#             */
-/*   Updated: 2026/09/05 22:22:44 by mapearso         ###   ########.fr       */
+/*   Updated: 2026/09/05 22:42:46 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,16 +45,16 @@ static const char	*get_mode_name(enum e_mode mode, enum e_mode algo_used)
 	if (mode == ADAPTIVE)
 	{
 		if (algo_used == SIMPLE)
-			return_string = "adaptive / O(n²)";
+			return_string = "adaptive / O(n^2)";
 		else if (algo_used == MEDIUM)
-			return_string = "adaptive / O(n√n)";
+			return_string = "adaptive / O(n*sqrt(n))";
 		else if (algo_used == MEDIUM)
 			return_string = "adaptive / nlog n";
 	}
 	if (mode == SIMPLE)
-		return_string = "simple / O(n²)";
+		return_string = "simple / O(n^2)";
 	if (mode == MEDIUM)
-		return_string = "medium / O(n√n)";
+		return_string = "medium / O(n*sqrt(n))";
 	if (mode == COMPLEX)
 		return_string = "complex / nlog n";
 	return (return_string);

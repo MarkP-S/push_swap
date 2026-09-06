@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/05 22:08:01 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/05 22:27:21 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/05 22:49:33 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	compute_disorder(t_environment *env)
 {
-	int		mistakes;
+	float		mistakes;
 	int		i;
 	int		j;
 	t_node	*first;

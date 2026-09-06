@@ -4,6 +4,7 @@
 # Compiled executable
 push_swap
 basic
+libft.a
 
 # VS Code
 .vscode/
