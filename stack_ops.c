@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 10:37:03 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/06 17:08:10 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/06 17:44:58 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void	ft_push_stack(t_env *env, t_stack *st, int value, int rank)
 		new_node->prev = new_node;
 		st->head = new_node;
 		st->tail = new_node;
-		st->length = 1;
+		return ;
 	}
 	new_node->prev = st->tail;
 	new_node->next = st->head;
