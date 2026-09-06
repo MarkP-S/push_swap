@@ -6,13 +6,13 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/05 22:08:01 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/06 15:31:59 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/06 16:10:13 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	compute_disorder(t_environment *env)
+void	compute_disorder(t_env *env)
 {
 	float		mistakes;
 	int		i;
@@ -40,7 +40,7 @@ void	compute_disorder(t_environment *env)
 	env->disorder = 2 * mistakes / (env->stack_a->length * (env->stack_a->length - 1));
 }
 
-void	run_algo(t_environment *env)
+void	run_algo(t_env *env)
 {
 	if (env->mode == ADAPTIVE)
 	{

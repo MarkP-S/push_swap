@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   simple.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mapearso <mapearso@student.42warsaw.pl>    +#+  +:+       +#+        */
+/*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 21:05:35 by mapearso          #+#    #+#             */
-/*   Updated: 2026/09/04 21:14:30 by mapearso         ###   ########.fr       */
+/*   Updated: 2026/09/06 16:10:13 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	find_min(t_stack *stack_a)
 	return (min_index);
 }
 
-void	move_to_top(t_environment *env, int index)
+void	move_to_top(t_env *env, int index)
 {
 	if (index <= env->stack_a->length / 2)
 	{
@@ -63,7 +63,7 @@ void	move_to_top(t_environment *env, int index)
 	}
 }
 
-void	selection_sort(t_environment *env)
+void	selection_sort(t_env *env)
 {
 	int	min_index;
 	int	i;

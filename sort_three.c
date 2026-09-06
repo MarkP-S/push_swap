@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_three.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mapearso <mapearso@student.42warsaw.pl>    +#+  +:+       +#+        */
+/*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 17:57:07 by mapearso          #+#    #+#             */
-/*   Updated: 2026/09/02 22:41:35 by mapearso         ###   ########.fr       */
+/*   Updated: 2026/09/06 16:10:13 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ condition 3 hit: 4 3 5  ->  3 4 5
 condition 2 hit: 4 5 3  ->  3 4 5
 */
 
-void	sort_three(t_environment *env)
+void	sort_three(t_env *env)
 {
 	int	top;
 	int	mid;

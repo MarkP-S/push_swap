@@ -6,16 +6,16 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 20:48:05 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/05 17:34:58 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/06 16:10:13 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_environment	*get_test_env(int *array)
+t_env	*get_test_env(int *array)
 {
 	int				i;
-	t_environment	*env;
+	t_env	*env;
 
 	i = 0;
 	env = ft_env_initialisation();

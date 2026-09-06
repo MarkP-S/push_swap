@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   medium.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mapearso <mapearso@student.42warsaw.pl>    +#+  +:+       +#+        */
+/*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/06 14:14:37 by mapearso          #+#    #+#             */
-/*   Updated: 2026/09/06 15:24:21 by mapearso         ###   ########.fr       */
+/*   Updated: 2026/09/06 16:10:13 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ run through length of stack a
 pull all back from b to a
 */
 
-static void	push_chunk(t_environment *env, int start, int end, int size)
+static void	push_chunk(t_env *env, int start, int end, int size)
 {
 	int	pushed;
 
@@ -50,7 +50,7 @@ static int	get_chunk_size(int n)
 	return (size);
 }
 
-void	chunk_sort(t_environment *env)
+void	chunk_sort(t_env *env)
 {
 	int	chunk_size;
 	int	length;

@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/06 15:33:14 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/06 15:50:19 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/06 16:10:13 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static void	ft_free_stack(t_stack *st)
 	free(st);
 }
 
-void	ft_free_memory(t_environment *env)
+void	ft_free_memory(t_env *env)
 {
 	if (!env)
 		ft_error_exit(env);
@@ -41,7 +41,7 @@ void	ft_free_memory(t_environment *env)
 	ft_error_exit(env);
 }
 
-void	ft_error_exit(t_environment *env)
+void	ft_error_exit(t_env *env)
 {
 	ft_free_memory(env);
 	ft_printf_fd(2, "Error\n");

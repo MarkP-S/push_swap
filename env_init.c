@@ -6,17 +6,17 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/30 20:31:50 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/06 15:52:29 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/06 16:10:13 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_environment	*ft_env_initialisation(void)
+t_env	*ft_env_initialisation(void)
 {
-	t_environment	*env;
+	t_env	*env;
 
-	env = malloc(sizeof(t_environment));
+	env = malloc(sizeof(t_env));
 	if(!env)
 		ft_error_exit(NULL);
 	env->ops_counters = malloc(sizeof(size_t) * 11);
@@ -28,7 +28,7 @@ t_environment	*ft_env_initialisation(void)
 }
 
 
-static void	ft_unique(t_environment *env, int value)
+static void	ft_unique(t_env *env, int value)
 {
 	t_node	*current;
 	int		i;
@@ -44,7 +44,7 @@ static void	ft_unique(t_environment *env, int value)
 	}
 }
 
-int		ft_stack_append(t_environment *env, int value)
+int		ft_stack_append(t_env *env, int value)
 {
 	t_node	*new_node;
 
@@ -72,7 +72,7 @@ int		ft_stack_append(t_environment *env, int value)
 	return (1);
 }
 
-void	ft_assign_ranks(t_environment *env)
+void	ft_assign_ranks(t_env *env)
 {
 	int	rank;
 	int i;

@@ -6,13 +6,13 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/04 21:09:55 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/06 15:50:19 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/06 16:10:13 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_handle_flags(t_environment *env, char *arg)
+int	ft_handle_flags(t_env *env, char *arg)
 {
 	if (!ft_strncmp(arg, "--bench", 7))
 	{
@@ -40,27 +40,7 @@ int	ft_handle_flags(t_environment *env, char *arg)
 	return (1);
 }
 
-// static int	ft_is_str(t_environment *env, char *arg)
-// {
-// 	int	i;
-// 	int	count_words;
-// 	int flag;
-	
-// 	i = 0;
-// 	flag = 0;
-// 	count_words = 0;
-// 	while(arg[i])
-// 	{
-// 		if(arg[i] != ' ' && (i == 0 || arg[i - 1] == ' '))
-// 			count_words++;
-// 		i++;
-// 	}
-// 	if (count_words > 1)
-// 		flag = 1;
-// 	return (flag);
-// }
-
-static int	ft_handle_num(t_environment *env, char *arg, int len)
+static int	ft_handle_num(t_env *env, char *arg, int len)
 {
 	int i;
 	long value;
@@ -89,7 +69,7 @@ static int	ft_handle_num(t_environment *env, char *arg, int len)
 	return (1);
 }
 
-int	ft_handle_str(t_environment *env, char *arg)
+int	ft_handle_str(t_env *env, char *arg)
 {
 	int 	i;
 	int		len;
@@ -117,7 +97,7 @@ int	ft_handle_str(t_environment *env, char *arg)
 	return (1);
 }
 
-void	parse_input(t_environment *env, int argc, char **argv)
+void	parse_input(t_env *env, int argc, char **argv)
 {
 	int i;
 

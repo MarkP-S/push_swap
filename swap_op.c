@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   swap_op.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mapearso <mapearso@student.42warsaw.pl>    +#+  +:+       +#+        */
+/*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/31 17:30:55 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/05 16:24:11 by mapearso         ###   ########.fr       */
+/*   Updated: 2026/09/06 16:10:13 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_sa_op(t_environment *env)
+int	ft_sa_op(t_env *env)
 {
 	if(env->stack_a->length < 2)
 		return (1);
@@ -21,7 +21,7 @@ int	ft_sa_op(t_environment *env)
 	return (1);
 }
 
-int	ft_sb_op(t_environment *env)
+int	ft_sb_op(t_env *env)
 {
 	if(env->stack_b->length < 2)
 		return (1);
@@ -30,7 +30,7 @@ int	ft_sb_op(t_environment *env)
 	return (1);
 }
 
-int	ft_ss_op(t_environment *env)
+int	ft_ss_op(t_env *env)
 {
 	if(env->stack_a->length < 2)
 		return (1);

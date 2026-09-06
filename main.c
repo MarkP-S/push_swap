@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 21:01:08 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/06 15:50:19 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/06 16:10:13 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 // int main()
 int	main(int argc, char **argv)
 {
-	t_environment *env;
+	t_env *env;
 
 	env = ft_env_initialisation();
 	if (argc < 2)
@@ -35,7 +35,7 @@ int	main(int argc, char **argv)
 	// int	values[] = {3, 4, 1, 0};
 	// int *arr = values;
 
-	// t_environment *env = get_test_env(arr);
+	// t_env *env = get_test_env(arr);
 	// while (env->stack_a->length)
 	// {
 	// 	ft_printf_fd(1, "%d\n", ft_pop_stack(env->stack_a));

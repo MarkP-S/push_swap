@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/05 16:04:55 by mapearso          #+#    #+#             */
-/*   Updated: 2026/09/06 15:50:19 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/06 16:10:13 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ static const char	*get_mode_name(enum e_mode mode, enum e_mode algo_used)
 	return (return_string);
 }
 
-void    print_op(t_environment *env, enum e_ops op)
+void    print_op(t_env *env, enum e_ops op)
 {
     if (!env || !env->ops_counters)
         return ;
@@ -70,7 +70,7 @@ void    print_op(t_environment *env, enum e_ops op)
 	ft_printf_fd(1, "\n");
 }
 
-void	print_float(t_environment *env)
+void	print_float(t_env *env)
 {
 int		whole;
 int		decimal;
@@ -87,7 +87,7 @@ ft_printf_fd(2, "%d\n", decimal);
 ft_printf_fd(2, "%");
 }
 
-void    print_benchmark(t_environment *env)
+void    print_benchmark(t_env *env)
 {
 	int		i;
 	
