@@ -6,7 +6,7 @@
 /*   By: mapearso <mapearso@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/06 14:14:37 by mapearso          #+#    #+#             */
-/*   Updated: 2026/09/06 17:47:27 by mapearso         ###   ########.fr       */
+/*   Updated: 2026/09/06 20:04:00 by mapearso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,24 +91,23 @@ static int	find_max_rank_index(t_stack *stack)
 
 void	chunk_sort(t_env *env)
 {
-	int	chunk_size;
 	int	length;
+	int	chunk_size;
 	int	chunk_start;
 	int	chunk_end;
+	int	current_size;
 
 	length = env->stack_a->length;
 	chunk_size = get_chunk_size(length);
 	chunk_start = 0;
 	while (chunk_start < length)
 	{
-		chunk_end = chunk_start + chunk_size - 1;
-		if (chunk_end >= length)
-		{
-			chunk_size -= chunk_end-length;
-			chunk_end = length - 1;
-		}
-		push_chunk(env, chunk_start, chunk_end, chunk_size);
-		chunk_start += chunk_size;
+		chunk_end = chunk_start + chunk_size;
+		if (chunk_end > length)
+			chunk_end = length;
+		current_size = chunk_end - chunk_start;
+		push_chunk(env, chunk_start, chunk_end - 1, current_size);
+		chunk_start = chunk_end;
 	}
 	while (env->stack_b->length > 0)
 	{

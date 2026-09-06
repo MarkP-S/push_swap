@@ -6,7 +6,7 @@
 /*   By: mapearso <mapearso@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/05 16:04:55 by mapearso          #+#    #+#             */
-/*   Updated: 2026/09/06 19:26:32 by mapearso         ###   ########.fr       */
+/*   Updated: 2026/09/06 20:18:05 by mapearso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ int		whole;
 int		decimal;
 float	value;
 
-value = env->disorder;
+value = env->disorder * 100;
 whole = (int)value;
 decimal = (int)((value - whole) * 100);
 
@@ -103,7 +103,7 @@ void    print_benchmark(t_env *env)
 	while (i < 11)
 	{
 		print_op_name(2, i);
-		ft_printf_fd(2, ": %d	", env->ops_counters[i]);
+		ft_printf_fd(2, ": %d  ", env->ops_counters[i]);
 		i++;
 	}
 	ft_printf_fd(2, "\n");
