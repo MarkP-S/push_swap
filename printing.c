@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   printing.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
+/*   By: mapearso <mapearso@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/05 16:04:55 by mapearso          #+#    #+#             */
-/*   Updated: 2026/09/06 18:10:27 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/06 19:26:32 by mapearso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,25 +40,25 @@ static void print_op_name(int fd, enum e_ops op)
 
 static const char	*get_mode_name(enum e_mode mode, enum e_mode algo_used)
 {
-	char *return_string;
-
 	if (mode == ADAPTIVE)
 	{
 		if (algo_used == SIMPLE)
-			return_string = "adaptive / O(n^2)";
+			return ("adaptive / O(n^2)");
 		else if (algo_used == MEDIUM)
-			return_string = "adaptive / O(n*sqrt(n))";
+			return ("adaptive / O(n*sqrt(n))");
 		else if (algo_used == COMPLEX)
-			return_string = "adaptive / nlog n";
+			return ("adaptive / nlog n");
+		return ("adaptive / unknown");
 	}
 	if (mode == SIMPLE)
-		return_string = "simple / O(n^2)";
+		return ("simple / O(n^2)");
 	if (mode == MEDIUM)
-		return_string = "medium / O(n*sqrt(n))";
+		return ("medium / O(n*sqrt(n))");
 	if (mode == COMPLEX)
-		return_string = "complex / nlog n";
-	return (return_string);
+		return ("complex / nlog n");
+	return ("unknown");
 }
+
 
 void    print_op(t_env *env, enum e_ops op)
 {
@@ -83,8 +83,8 @@ decimal = (int)((value - whole) * 100);
 ft_printf_fd(2, "%d.", whole);
 if (decimal < 10)
 	ft_printf_fd(2, "0");
-ft_printf_fd(2, "%d\n", decimal);
-ft_printf_fd(2, "%");
+ft_printf_fd(2, "%d", decimal);
+ft_printf_fd(2, "%\n");
 }
 
 void    print_benchmark(t_env *env)
@@ -106,5 +106,5 @@ void    print_benchmark(t_env *env)
 		ft_printf_fd(2, ": %d	", env->ops_counters[i]);
 		i++;
 	}
-	ft_printf_fd(1, "\n");
+	ft_printf_fd(2, "\n");
 }

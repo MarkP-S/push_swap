@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   env_init.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
+/*   By: mapearso <mapearso@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/30 20:31:50 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/06 17:45:30 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/06 19:27:13 by mapearso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ t_env	*ft_env_initialisation(void)
 {
 	t_env	*env;
 
-	env = malloc(sizeof(t_env));
+	env = ft_calloc(1, sizeof(t_env));
 	if(!env)
 		ft_error_exit(NULL);
-	env->ops_counters = malloc(sizeof(size_t) * 11);
-	env->stack_a = malloc(sizeof(t_stack));
-	env->stack_b = malloc(sizeof(t_stack));
+	env->ops_counters = ft_calloc(11, sizeof(size_t));
+	env->stack_a = ft_calloc(1, sizeof(t_stack));
+	env->stack_b = ft_calloc(1, sizeof(t_stack));
 	if(!(env->ops_counters && env->stack_a && env->stack_b))
 		ft_error_exit(env); 
 	return (env);
