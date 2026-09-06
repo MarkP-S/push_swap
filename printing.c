@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/05 16:04:55 by mapearso          #+#    #+#             */
-/*   Updated: 2026/09/05 22:42:46 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/06 15:11:26 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static const char	*get_mode_name(enum e_mode mode, enum e_mode algo_used)
 			return_string = "adaptive / O(n^2)";
 		else if (algo_used == MEDIUM)
 			return_string = "adaptive / O(n*sqrt(n))";
-		else if (algo_used == MEDIUM)
+		else if (algo_used == COMPLEX)
 			return_string = "adaptive / nlog n";
 	}
 	if (mode == SIMPLE)
