@@ -33,7 +33,7 @@ SRC = main.c \
 	error_exit.c \
 	adaptive.c \
 	complex.c \
-# 	medium.c
+	medium.c
 
 
 OBJ = $(SRC:.c=.o)
