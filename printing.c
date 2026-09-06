@@ -6,7 +6,7 @@
 /*   By: mapearso <mapearso@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/05 16:04:55 by mapearso          #+#    #+#             */
-/*   Updated: 2026/09/06 21:20:59 by mapearso         ###   ########.fr       */
+/*   Updated: 2026/09/06 21:37:14 by mapearso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,11 +66,8 @@ void    print_op(t_env *env, enum e_ops op)
         return ;
     env->ops_counters[op]++;
     env->total_ops++;
-	if (!env->benchmark_flag)
-	{
     	print_op_name(1, op);
 		ft_printf_fd(1, "\n");
-	}
 }
 
 void	print_float(t_env *env)
