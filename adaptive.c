@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/05 22:08:01 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/05 22:49:33 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/06 15:26:17 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,23 @@ void	compute_disorder(t_environment *env)
 		i++;
 	}
 	env->disorder = 2 * mistakes / (env->stack_a->length * (env->stack_a->length - 1));
+}
+
+void	run_algo(t_environment *env)
+{
+	if (env->mode == ADAPTIVE)
+	{
+		if (env->disorder < 0.2)
+			env->algo_used = SIMPLE;
+		else if (env->disorder < 0.5)
+			env->algo_used = MEDIUM;
+		else
+			env->algo_used = COMPLEX;
+	}
+	if (env->algo_used == SIMPLE)
+		selection_sort(env);
+	else if (env->algo_used == MEDIUM)
+		chunk_sort(env);
+	else if (env->algo_used == COMPLEX)
+		radix_sort(env);
 }
