@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/04 21:09:55 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/06 16:10:13 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/06 20:30:25 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,16 +55,16 @@ static int	ft_handle_num(t_env *env, char *arg, int len)
 		i++;
 	if(!arg[i])
 		ft_error_exit(env);
-	while(i < len)
+	while(i < len && len < 12)
 	{
 		if(!ft_isdigit(arg[i]))
 			ft_error_exit(env);
 		value = value * 10 + (arg[i] - '0');
-		if ((sign > 0 && value > INT_MAX) || (sign < 0 || -value < INT_MIN))
-			ft_error_exit(env);
 		i++;
 	}
 	value *= sign;
+	if (value > INT_MAX || value < INT_MIN)
+		ft_error_exit(env);
 	ft_stack_append(env, value);
 	return (1);
 }
