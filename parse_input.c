@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/04 21:09:55 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/05 21:53:30 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/06 15:16:43 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,9 +107,7 @@ int	ft_handle_str(t_environment *env, char *arg)
 			len = 0;
 		}
 		else 
-		{
 			len++;
-		}
 		i++;
 	}
 	if(len > 0)
@@ -119,3 +117,18 @@ int	ft_handle_str(t_environment *env, char *arg)
 	return (1);
 }
 
+void	parse_input(t_environment *env, int argc, char **argv)
+{
+	int i;
+
+	i = 0;
+	while (i < argc - 1)
+	{
+		i++;
+		if (ft_handle_flags(env, argv[i]))
+			continue;
+		if (ft_handle_str(env, argv[i]))
+			continue;
+		exit(1);
+	}
+}
