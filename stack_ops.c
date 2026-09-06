@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 10:37:03 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/06 16:10:13 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/06 16:17:21 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,8 @@ void	ft_swap_stack(t_stack *st)
 
 void ft_pop_stack(t_stack *st)
 {
-	int		popped;
 	t_node	*node_to_free;
 
-	popped = st->head->value;
 	node_to_free = st->head;
 	if (st->head == st->tail)
 	{
@@ -81,5 +79,4 @@ void ft_reverse_rotate_stack(t_stack *st)
 {
 	st->tail = st->tail->prev;
 	st->head = st->head->prev;
-	return (1);
 }
