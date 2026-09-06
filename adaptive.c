@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   adaptive.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
+/*   By: mapearso <mapearso@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/05 22:08:01 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/06 17:24:34 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/06 20:15:22 by mapearso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,19 +42,19 @@ void	compute_disorder(t_env *env)
 
 void	run_algo(t_env *env)
 {
-	// if (env->mode == ADAPTIVE)
-	// {
-	// 	if (env->disorder < 0.2)
-	// 		env->algo_used = SIMPLE;
-	// 	else if (env->disorder < 0.5)
-	// 		env->algo_used = MEDIUM;
-	// 	else
-	// 		env->algo_used = COMPLEX;
-	// }
+	if (env->mode == ADAPTIVE)
+	{
+		if (env->disorder < 0.2)
+			env->algo_used = SIMPLE;
+	 	else if (env->disorder < 0.5)
+	 		env->algo_used = MEDIUM;
+		else
+	 		env->algo_used = COMPLEX;
+	}
 	if (env->algo_used == SIMPLE)
 		selection_sort(env);
-	// else if (env->algo_used == MEDIUM)
-	// 	chunk_sort(env);
-	// else if (env->algo_used == COMPLEX)
-	// 	radix_sort(env);
+	else if (env->algo_used == MEDIUM)
+	 	chunk_sort(env);
+	else if (env->algo_used == COMPLEX)
+	 	radix_sort(env);
 }
