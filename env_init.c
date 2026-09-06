@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/30 20:31:50 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/06 16:13:07 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/06 16:14:46 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ t_env	*ft_env_initialisation(void)
 		ft_error_exit(env); 
 	return (env);
 }
-
 
 static void	ft_unique(t_env *env, int value)
 {
