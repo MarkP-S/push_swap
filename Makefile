@@ -31,9 +31,9 @@ SRC = main.c \
 	parse_input.c \
 	printing.c \
 	error_exit.c \
-	adaptive.c 
-# 	medium.c \
-# 	complex.c \
+	adaptive.c \
+	complex.c \
+# 	medium.c
 
 
 OBJ = $(SRC:.c=.o)
