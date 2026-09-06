@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/30 20:31:50 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/05 21:40:59 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/06 12:45:20 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,24 +80,24 @@ int		ft_stack_append(t_environment *env, int value)
 
 void	ft_assign_ranks(t_environment *env)
 {
-	int	i;
+	int	rank;
+	int i;
 	t_node	*min_non_ranked;
 	t_node	*current_node;
 
-	i = 0;
-	min_non_ranked = env->stack_a->head;
-	while (i < env->stack_a->length)
+	rank = 0;
+	while (rank < env->stack_a->length)
 	{
-		while (min_non_ranked->rank >= 0)
-			min_non_ranked = min_non_ranked->next;
+		i = 0;
+		min_non_ranked = NULL;
 		current_node = env->stack_a->head;
-		while (current_node->next != env->stack_a->head)
-		{
-			if (current_node->rank < 0 && current_node->value < min_non_ranked->value)
+		while (i < env->stack_a->length) {
+			if (current_node->rank < 0 && (!min_non_ranked || current_node->value < min_non_ranked->value))
 				min_non_ranked = current_node;
 			current_node = current_node->next;
+			i++;
 		}
-		min_non_ranked->rank = i;
-		i++;
+		min_non_ranked->rank = rank;
+		rank++;
 	}
 }

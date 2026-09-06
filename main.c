@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 21:01:08 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/05 22:52:24 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/06 12:24:17 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int	main(int argc, char **argv)
 			continue;
 		exit(1);
 	}
+	ft_assign_ranks(env);
 	compute_disorder(env);
 	selection_sort(env);
 	print_benchmark(env);
