@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/30 20:31:50 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/06 16:10:13 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/06 16:13:07 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static void	ft_unique(t_env *env, int value)
 	}
 }
 
-int		ft_stack_append(t_env *env, int value)
+void	ft_stack_append(t_env *env, int value)
 {
 	t_node	*new_node;
 
@@ -61,7 +61,6 @@ int		ft_stack_append(t_env *env, int value)
 		env->stack_a->head = new_node;
 		env->stack_a->tail = new_node;
 		env->stack_a->length = 1;
-		return (1);
 	}
 	new_node->prev = env->stack_a->tail;
 	new_node->next = env->stack_a->head;
@@ -69,7 +68,6 @@ int		ft_stack_append(t_env *env, int value)
 	env->stack_a->head->prev = new_node;
 	env->stack_a->tail = new_node;
 	env->stack_a->length++;
-	return (1);
 }
 
 void	ft_assign_ranks(t_env *env)
