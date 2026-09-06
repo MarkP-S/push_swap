@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/30 20:31:50 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/06 15:50:19 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/06 15:52:29 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,12 @@ t_environment	*ft_env_initialisation(void)
 
 	env = malloc(sizeof(t_environment));
 	if(!env)
-		return (NULL);
-	env->mode = ADAPTIVE;
+		ft_error_exit(NULL);
 	env->ops_counters = malloc(sizeof(size_t) * 11);
-	env->benchmark_flag = 0;
 	env->stack_a = malloc(sizeof(t_stack));
 	env->stack_b = malloc(sizeof(t_stack));
 	if(!(env->ops_counters && env->stack_a && env->stack_b))
-		return (0); //should free whole env if any fails
-	env->stack_a->length = 0;
-	env->stack_b->length = 0;
-	//All ops counters should be set to 0 to start?
-	//Do head and tail need to be set to null at first?
+		ft_error_exit(env); 
 	return (env);
 }
 
