@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/05 16:04:55 by mapearso          #+#    #+#             */
-/*   Updated: 2026/09/06 16:10:13 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/06 18:10:27 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,8 +91,8 @@ void    print_benchmark(t_env *env)
 {
 	int		i;
 	
-	if (!env || !env->benchmark_flag)
-		ft_error_exit(env);
+	if (!env->benchmark_flag)
+		return ;
 
 	ft_printf_fd(2, "disorder: ");
 	print_float(env);

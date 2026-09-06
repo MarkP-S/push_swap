@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 21:01:08 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/06 16:10:13 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/06 17:54:19 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int	main(int argc, char **argv)
 	parse_input(env, argc, argv);
 	ft_assign_ranks(env);
 	compute_disorder(env);
+	selection_sort(env);
 	print_benchmark(env);
 	ft_free_memory(env);
 	return (0);
