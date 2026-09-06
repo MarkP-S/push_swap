@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/06 18:27:57 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/06 19:05:45 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/06 19:41:12 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	radix_sort(t_env *env)
 	int 	i;
 	
 	bit = 1;
-	while (bit < env->stack_a->length)
+	while (bit / 2 < env->stack_a->length)
 	{
 		i = 0;
 		while (i < env->stack_a->length)
@@ -26,7 +26,7 @@ void	radix_sort(t_env *env)
 			if(env->stack_a->head->rank & bit)
 			{
 				i++;
-				ft_rra_op(env);
+				ft_ra_op(env);
 			}
 			else
 				ft_pb_op(env);

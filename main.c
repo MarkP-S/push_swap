@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 21:01:08 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/06 18:51:58 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/06 19:38:47 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,11 @@ int	main(int argc, char **argv)
 	compute_disorder(env);
 	radix_sort(env);
 	print_benchmark(env);
+	while (env->stack_a->length)
+	{
+		ft_printf_fd(1, "%d\n", env->stack_a->head->value);
+		ft_pop_stack(env->stack_a);
+	}
 	ft_free_memory(env);
 	return (0);
 }
