@@ -23,8 +23,6 @@ SRC = main.c \
 	push_op.c \
 	rotate_op.c \
 	reverse_rotate_op.c \
-	strategies.c \
-	testing_utils.c \
 	simple.c \
 	sort_three.c \
 	sort_five.c \
