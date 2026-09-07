@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_three.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
+/*   By: mapearso <mapearso@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 17:57:07 by mapearso          #+#    #+#             */
-/*   Updated: 2026/09/06 16:10:13 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/07 18:11:03 by mapearso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,9 @@ void	sort_three(t_env *env)
 
 	if (env->stack_a->length != 3)
 		return ;
-
 	top = env->stack_a->head->value;
 	mid = env->stack_a->head->next->value;
 	bot = env->stack_a->head->next->next->value;
-
 	if (top >= mid && top >= bot)
 		ft_ra_op(env);
 	else if (mid >= top && mid >= bot)

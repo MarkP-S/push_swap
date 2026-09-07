@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   simple.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
+/*   By: mapearso <mapearso@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 21:05:35 by mapearso          #+#    #+#             */
-/*   Updated: 2026/09/06 16:10:13 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/07 18:10:32 by mapearso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 Selection sort
 
 Find minimum value in stack a - create function for this
-Move value to top of a - ra if closer to top, rra if closer to bottom - create function
+Move value to top of a - ra if closer to top, 
+rra if closer to bottom - create function
 pb to push top of a to top of b
 
 Repeat these steps until a is empty
@@ -83,4 +84,3 @@ void	selection_sort(t_env *env)
 		i--;
 	}
 }
-
