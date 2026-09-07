@@ -17,6 +17,16 @@ The project uses two stacks:
 
 The challenge is not simply to sort the numbers, but to do so using as few operations as possible.
 
+## Contributions
+
+Work on the project was split between ldubok and mapearso. 
+
+* ldubok primarily worked on the parsing and operations, and complex algorithm.
+* mapearso primarily worked on the simple and medium algorithms, and printing.
+
+Both team members worked on the structures, Makefile, and .h file.
+Testing and debugging was done collaboratively.
+
 ## Allowed Operations
 
 ### Swap
