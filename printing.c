@@ -44,11 +44,11 @@ static const char	*get_mode_name(enum e_mode mode, enum e_mode algo_used)
 	{
 		if (algo_used == SIMPLE)
 			return ("adaptive / O(n^2)");
-		else if (algo_used == MEDIUM)
+		if (algo_used == MEDIUM)
 			return ("adaptive / O(n*sqrt(n))");
-		else if (algo_used == COMPLEX)
+		if (algo_used == COMPLEX)
 			return ("adaptive / nlog n");
-		return ("adaptive / unknown");
+		return ("adaptive / none");
 	}
 	if (mode == SIMPLE)
 		return ("simple / O(n^2)");
