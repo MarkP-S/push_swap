@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 14:09:05 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/07 18:05:05 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/07 18:08:42 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,9 +106,6 @@ int		ft_rr_op(t_env *env);
 int		ft_rra_op(t_env *env);
 int		ft_rrb_op(t_env *env);
 int		ft_rrr_op(t_env *env);
-
-//	testing utils
-t_env	*get_test_env(int *array);
 
 //	algorithms
 void	selection_sort(t_env *env);
