@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   env_init.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
+/*   By: mapearso <mapearso@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/30 20:31:50 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/07 18:16:57 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/07 18:19:03 by mapearso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,8 +85,7 @@ void	ft_assign_ranks(t_env *env)
 		current_node = env->stack_a->head;
 		while (i < env->stack_a->length)
 		{
-			if (current_node->rank < 0 && (!min_non_ranked
-					|| current_node->value < min_non_ranked->value))
+			if (current_node->rank < 0 && (!min_non_ranked || current_node->value < min_non_ranked->value))
 				min_non_ranked = current_node;
 			current_node = current_node->next;
 			i++;
