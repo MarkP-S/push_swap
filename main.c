@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 21:01:08 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/06 22:10:00 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/07 17:36:48 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ int	main(int argc, char **argv)
 {
 	t_env *env;
 
-	env = ft_env_initialisation();
 	if (argc < 2)
 		return (0);
+	env = ft_env_initialisation();
 	parse_input(env, argc, argv);
 	ft_assign_ranks(env);
 	compute_disorder(env);
