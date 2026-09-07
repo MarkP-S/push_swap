@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/05 22:08:01 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/06 22:33:02 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/07 17:55:46 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	compute_disorder(t_env *env)
 	t_node	*first;
 	t_node	*second;
 
+	if (env->stack_a->length < 2)
+		return ;
 	i = 0;
 	mistakes = 0;
 	first = env->stack_a->head;
