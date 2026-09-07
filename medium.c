@@ -6,7 +6,7 @@
 /*   By: mapearso <mapearso@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/06 14:14:37 by mapearso          #+#    #+#             */
-/*   Updated: 2026/09/06 20:04:00 by mapearso         ###   ########.fr       */
+/*   Updated: 2026/09/07 18:09:53 by mapearso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ static void	move_to_top(t_env *env, int index)
 			ft_rrb_op(env);
 	}
 }
+
 static int	find_max_rank_index(t_stack *stack)
 {
 	int		max;
