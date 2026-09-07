@@ -14,26 +14,16 @@
 
 int	ft_handle_flags(t_env *env, char *arg)
 {
-	if (!ft_strncmp(arg, "--bench", 7))
-	{
+	if (!ft_strncmp(arg, "--bench", 8))
 		env->benchmark_flag = 1;
-	}
-	else if (!ft_strncmp(arg, "--adaptive", 10))
-	{
+	else if (!ft_strncmp(arg, "--adaptive", 11))
 		env->mode = ADAPTIVE;
-	}
-	else if (!ft_strncmp(arg, "--simple", 8))
-	{
+	else if (!ft_strncmp(arg, "--simple", 9))
 		env->mode = SIMPLE;
-	}
-	else if (!ft_strncmp(arg, "--medium", 8))
-	{
+	else if (!ft_strncmp(arg, "--medium", 9))
 		env->mode = MEDIUM;
-	}
-	else if (!ft_strncmp(arg, "--complex", 9))
-	{
+	else if (!ft_strncmp(arg, "--complex", 10))
 		env->mode = COMPLEX;
-	}
 	else
 		return (0);
 	env->algo_used = env->mode;
@@ -42,22 +32,24 @@ int	ft_handle_flags(t_env *env, char *arg)
 
 static int	ft_handle_num(t_env *env, char *arg, int len)
 {
-	int i;
-	long value;
-	int sign;
+	int		i;
+	long	value;
+	int		sign;
 
 	i = 0;
 	value = 0;
 	sign = 1;
-	if(arg[i] == '-')
-		sign = -1;
-	if(arg[i] == '-' || arg[i] == '+')
-		i++;
-	if(!arg[i])
+	if (len >= 12)
 		ft_error_exit(env);
-	while(i < len && len < 12)
+	if (arg[i] == '-')
+		sign = -1;
+	if (arg[i] == '-' || arg[i] == '+')
+		i++;
+	if (!arg[i] || i >= len)
+		ft_error_exit(env);
+	while (i < len)
 	{
-		if(!ft_isdigit(arg[i]))
+		if (!ft_isdigit(arg[i]))
 			ft_error_exit(env);
 		value = value * 10 + (arg[i] - '0');
 		i++;

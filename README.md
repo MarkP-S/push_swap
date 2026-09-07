@@ -140,7 +140,7 @@ The program supports several sorting strategies:
 | `--medium`   | Chunk Sort     | Divides the input into chunks for more efficient sorting          |
 | `--complex`  | Radix Sort     | Uses binary radix sort for larger inputs                          |
 | `--adaptive` | Adaptive       | Selects a sorting strategy based on the input's level of disorder |
-| `--bench`    | Benchmark      | Hides operations and displays sorting metrics                     |
+| `--bench`    | Benchmark      | Keeps operations on stdout; prints sorting metrics on stderr |
 
 ### Force a specific strategy
 
@@ -165,22 +165,21 @@ shuf -i 0-9999 -n 500 > args.txt
 
 ### Benchmarking
 
-Run with benchmarking enabled to hide the operations and display only the metrics:
+Run with benchmarking enabled to print metrics on stderr while operations stay on stdout (so they can still be piped to the checker):
 
 ```bash
 shuf -i 0-9999 -n 500 > args.txt
-./push_swap --bench $(cat args.txt) 2> bench.txt
+./push_swap --bench $(cat args.txt) 2> bench.txt >/dev/null
 cat bench.txt
 ```
 
 Example output:
 
 ```text
-[bench] disorder: 49.93%
-[bench] strategy: Adaptive / O(n√n)
-[bench] total_ops: 7997
-[bench] sa: 0  sb: 0  ss: 0  pa: 500  pb: 500
-[bench] ra: 4840  rb: 1088  rr: 0  rra: 0  rrb: 1059  rrr: 0
+disorder: 49.93%
+strategy: adaptive / O(n*sqrt(n))
+total_ops: 7997
+sa: 0  sb: 0  ss: 0  pa: 500  pb: 500  ra: 4840  rb: 1088  rr: 0  rra: 0  rrb: 1059  rrr: 0
 ```
 
 ### Pipe operations to the checker while saving the benchmark
@@ -206,11 +205,10 @@ cat bench.txt
 Example:
 
 ```text
-[bench] disorder: 40.00%
-[bench] strategy: Adaptive / O(n√n)
-[bench] total_ops: 13
-[bench] sa: 0  sb: 0  ss: 0  pa: 5  pb: 5
-[bench] ra: 2  rb: 1  rr: 0  rra: 0  rrb: 0  rrr: 0
+disorder: 40.00%
+strategy: adaptive / O(n*sqrt(n))
+total_ops: 13
+sa: 0  sb: 0  ss: 0  pa: 5  pb: 5  ra: 2  rb: 1  rr: 0  rra: 0  rrb: 0  rrr: 0
 ```
 
 ### Error management

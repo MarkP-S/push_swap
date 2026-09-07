@@ -12,6 +12,9 @@ libft.a
 # macOS
 .DS_Store
 
-# temp
+# temp / local artifacts
 temp
-path 
+path
+traces.txt
+bench.txt
+args.txt

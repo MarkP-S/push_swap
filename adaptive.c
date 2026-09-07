@@ -14,20 +14,27 @@
 
 void	compute_disorder(t_env *env)
 {
-	float		mistakes;
+	float	mistakes;
 	int		i;
 	int		j;
+	int		n;
 	t_node	*first;
 	t_node	*second;
 
+	n = env->stack_a->length;
+	if (n < 2)
+	{
+		env->disorder = 0;
+		return ;
+	}
 	i = 0;
 	mistakes = 0;
 	first = env->stack_a->head;
-	while (i < env->stack_a->length)
+	while (i < n)
 	{
 		second = first->next;
 		j = i + 1;
-		while (j < env->stack_a->length)
+		while (j < n)
 		{
 			if (first->value > second->value)
 				mistakes += 1;
@@ -37,7 +44,7 @@ void	compute_disorder(t_env *env)
 		first = first->next;
 		i++;
 	}
-	env->disorder = 2 * mistakes / (env->stack_a->length * (env->stack_a->length - 1));
+	env->disorder = 2 * mistakes / (n * (n - 1));
 }
 
 void	run_algo(t_env *env)

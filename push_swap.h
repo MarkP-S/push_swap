@@ -15,7 +15,6 @@
 # define PUSH_SWAP_H
 
 #include <stdlib.h>
-#include <stdio.h>
 #include <limits.h>
 #include "libft.h"
 
@@ -107,9 +106,6 @@ int	ft_rr_op(t_env *env);
 int	ft_rra_op(t_env *env);
 int	ft_rrb_op(t_env *env);
 int	ft_rrr_op(t_env *env);
-
-//	testing utils
-t_env	*get_test_env(int *array);
 
 //	algorithms
 void	selection_sort(t_env *env);
