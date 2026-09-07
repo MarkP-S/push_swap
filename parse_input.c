@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/04 21:09:55 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/06 20:30:25 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/07 08:56:19 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,22 @@ int	ft_handle_flags(t_env *env, char *arg)
 	env->algo_used = env->mode;
 	return (1);
 }
+static void	ft_is_num(t_env *env, char *arg, int len)
+{
+	int i;
+	
+	i = 0;
+	if(arg[i] == '-' || arg[i] == '+')
+		i++;
+	if(!arg[i])
+		ft_error_exit(env);
+	while(i < len)
+	{
+		if(!ft_isdigit(arg[i]))
+			ft_error_exit(env);
+		i++;
+	}
+}
 
 static int	ft_handle_num(t_env *env, char *arg, int len)
 {
@@ -49,16 +65,13 @@ static int	ft_handle_num(t_env *env, char *arg, int len)
 	i = 0;
 	value = 0;
 	sign = 1;
+	ft_is_num(env, arg, len);
 	if(arg[i] == '-')
 		sign = -1;
 	if(arg[i] == '-' || arg[i] == '+')
 		i++;
-	if(!arg[i])
-		ft_error_exit(env);
-	while(i < len && len < 12)
+	while(i < len)
 	{
-		if(!ft_isdigit(arg[i]))
-			ft_error_exit(env);
 		value = value * 10 + (arg[i] - '0');
 		i++;
 	}
