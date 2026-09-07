@@ -165,7 +165,7 @@ shuf -i 0-9999 -n 500 > args.txt
 
 ### Benchmarking
 
-Run with benchmarking enabled to hide the operations and display only the metrics:
+Run with benchmarking enabled to display the metrics to stderr:
 
 ```bash
 shuf -i 0-9999 -n 500 > args.txt
