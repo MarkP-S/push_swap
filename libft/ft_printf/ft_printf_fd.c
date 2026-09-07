@@ -13,7 +13,6 @@
 #include "ft_printf.h"
 #include "../libft.h"
 
-
 static int	ft_is_conversion(char c)
 {
 	return (c == 'c' || c == 's' || c == 'p' || c == 'd' || c == 'i'
