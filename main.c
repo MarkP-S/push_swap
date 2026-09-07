@@ -6,7 +6,7 @@
 /*   By: ldubok <ldubok@student.42warsaw.pl>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 21:01:08 by ldubok            #+#    #+#             */
-/*   Updated: 2026/09/07 18:27:39 by ldubok           ###   ########.fr       */
+/*   Updated: 2026/09/07 18:56:57 by ldubok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ int	main(int argc, char **argv)
 	if (env->disorder > 0)
 		run_algo(env);
 	print_benchmark(env);
+	ft_free_memory(env);
 	return (0);
 }
